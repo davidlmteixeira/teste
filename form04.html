@@ -8,11 +8,24 @@
 </head>
 <body>
     <h1>Exemplo de formulário</h1>
-    <form action="cadastro.php" method="get">
+    <form action="cadastro.php" method="get" autocomplete="on">
        <div>
         <label for="iemail">E-mail:</label>
-        <input type="email" name="email" id="iemail">
-       </div> 
+        <input type="email" name="email" id="iemail" autocomplete="email" required>
+       </div>
+       <p>
+        <label for="itel">Telefone</label>
+        <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\) \d{4,5}-\d{4}$" required>
+       </p>
+       <!-- Estudar mais sobre RegEx-->
+       <div>
+        <p>
+            
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+       </div>
+       
     </form>
 </body>
 </html>
